@@ -19,6 +19,10 @@
 		0A412C1C200DFF4D00ABCE17 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A412C1B200DFF4D00ABCE17 /* InterfaceController.swift */; };
 		0A412C1E200DFF4D00ABCE17 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A412C1D200DFF4D00ABCE17 /* ExtensionDelegate.swift */; };
 		0A412C20200DFF4D00ABCE17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A412C1F200DFF4D00ABCE17 /* Assets.xcassets */; };
+		0A412C30200E002000ABCE17 /* PhotoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A412C2F200E002000ABCE17 /* PhotoDetailController.swift */; };
+		0A412C32200E002B00ABCE17 /* PhotoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A412C31200E002B00ABCE17 /* PhotoTableCell.swift */; };
+		0A412C34200E003C00ABCE17 /* PhotoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A412C33200E003C00ABCE17 /* PhotoTableController.swift */; };
+		0A412C37200E008A00ABCE17 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A412C36200E008A00ABCE17 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		0A412C1D200DFF4D00ABCE17 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		0A412C1F200DFF4D00ABCE17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A412C21200DFF4D00ABCE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A412C2F200E002000ABCE17 /* PhotoDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailController.swift; sourceTree = "<group>"; };
+		0A412C31200E002B00ABCE17 /* PhotoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableCell.swift; sourceTree = "<group>"; };
+		0A412C33200E003C00ABCE17 /* PhotoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableController.swift; sourceTree = "<group>"; };
+		0A412C36200E008A00ABCE17 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		0A412BEC200DFF4C00ABCE17 = {
 			isa = PBXGroup;
 			children = (
+				0A412C35200E007F00ABCE17 /* Shared */,
 				0A412BF7200DFF4C00ABCE17 /* Layout */,
 				0A412C0B200DFF4D00ABCE17 /* Layout WatchKit App */,
 				0A412C1A200DFF4D00ABCE17 /* Layout WatchKit Extension */,
@@ -129,6 +138,9 @@
 				0A412BFF200DFF4C00ABCE17 /* Assets.xcassets */,
 				0A412C01200DFF4C00ABCE17 /* LaunchScreen.storyboard */,
 				0A412C04200DFF4C00ABCE17 /* Info.plist */,
+				0A412C2F200E002000ABCE17 /* PhotoDetailController.swift */,
+				0A412C31200E002B00ABCE17 /* PhotoTableCell.swift */,
+				0A412C33200E003C00ABCE17 /* PhotoTableController.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -152,6 +164,14 @@
 				0A412C21200DFF4D00ABCE17 /* Info.plist */,
 			);
 			path = "Layout WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0A412C35200E007F00ABCE17 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0A412C36200E008A00ABCE17 /* Photo.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A412C37200E008A00ABCE17 /* Photo.swift in Sources */,
 				0A412BFB200DFF4C00ABCE17 /* ViewController.swift in Sources */,
+				0A412C34200E003C00ABCE17 /* PhotoTableController.swift in Sources */,
+				0A412C32200E002B00ABCE17 /* PhotoTableCell.swift in Sources */,
+				0A412C30200E002000ABCE17 /* PhotoDetailController.swift in Sources */,
 				0A412BF9200DFF4C00ABCE17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,7 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.overscope.Layout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -553,7 +577,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.overscope.Layout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
