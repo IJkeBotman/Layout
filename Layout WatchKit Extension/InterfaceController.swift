@@ -11,9 +11,17 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet var collapsedCommentLabel: WKInterfaceLabel!
+    @IBOutlet var expandedCommentLabel: WKInterfaceLabel!
+    @IBOutlet var moreLabel: WKInterfaceLabel!
+    @IBOutlet var wwdcImage: WKInterfaceImage!
+    var expanded = false
+    
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        WKExtension.shared().isAutorotating = true
         
         // Configure interface objects here.
     }
@@ -27,5 +35,15 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    @IBAction func onMoreButton() {
+        expanded = !expanded
+        collapsedCommentLabel.setHidden(expanded)
+        expandedCommentLabel.setHidden(!expanded)
+        moreLabel.setText("Tap to " + (expanded ? "view less" : "view more") + "...")
+        
+        if expanded {
+            scroll(to: expandedCommentLabel, at: .bottom, animated: true)
+        }
+    }
+    
 }
